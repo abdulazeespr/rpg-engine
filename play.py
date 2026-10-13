@@ -24,7 +24,9 @@ if __name__ == "__main__":
     kim.attack(hero)
     print(hero.describe())
     hero.heal(50)
-    
+    goblin.health -= 50
+    print(goblin.describe())
+
 
 
 
