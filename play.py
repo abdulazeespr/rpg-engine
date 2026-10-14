@@ -13,6 +13,9 @@ if __name__ == "__main__":
     print(kim.describe())
     print(raju.describe())
 
+
+    hero.take_damage(150)
+    # hero.take_damage(-150)
     hero.attack(goblin)
     print(goblin.describe())
     kim.attack(raju)
@@ -20,11 +23,17 @@ if __name__ == "__main__":
     raju.heal(10)
     goblin.attack(kim)
     print(kim.describe())
-    kim.heal(25)
+    kim.heal(250)
     kim.attack(hero)
     print(hero.describe())
-    hero.heal(50)
-    goblin.health -= 50
+    hero.heal(-50)
+    print(goblin.health )
+    print(raju.describe())
+    raju.heal(10)
+    goblin.attack(kim)
+    print(kim.describe())
+    # goblin.health -= 50
+  
     print(goblin.describe())
 
 
