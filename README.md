@@ -21,3 +21,8 @@ Traceback (most recent call last):
 AttributeError: property 'health' of 'Character' object has no setter
 
 so you only read the variable and can't update 
+
+ Inheritance 
+ -------------
+
+ when create class in future we use some prorties and functions from class and also some special or extra for spefic . you can use  Inheritance class . which means rather copy class you use like relationship child-parent you can get all from parent if need you can update or overide functions and create new . 
