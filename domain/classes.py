@@ -46,4 +46,5 @@ class Cleric(Character):
             target.heal(heal)
             print(f"{self.name} uses a {heal} heal on ally {target.name}.")
 
-        
+
+
