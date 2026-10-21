@@ -1,4 +1,7 @@
-class Character:
+from abc import ABC, abstractmethod
+
+
+class Character(ABC):
     def __init__(self, name: str, health: int, attack_power: int):
         self.name = name
         self._health = health # protected: "internal use, but not enforced"
@@ -31,7 +34,12 @@ class Character:
 
     def heal(self,amount:int) -> None:
         if amount < 0 :
-                    raise ValueError("Heal Cannot be Negative")
+                raise ValueError("Heal Cannot be Negative")
         
         self._health = min(self.__max_health,self._health + amount)
-        print(f"{self.name} that increases {self.health}")    
+        print(f"{self.name} heals for {amount} HP!")    
+
+    @abstractmethod
+    def special_ability(self,target: "Character") -> None:
+           """Every concrete Character MUST define its own special move."""
+           raise NotImplementedError

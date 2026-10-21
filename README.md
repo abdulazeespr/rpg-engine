@@ -26,3 +26,16 @@ so you only read the variable and can't update
  -------------
 
  when create class in future we use some prorties and functions from class and also some special or extra for spefic . you can use  Inheritance class . which means rather copy class you use like relationship child-parent you can get all from parent if need you can update or overide functions and create new . 
+
+ polymoriphism
+ ------------
+it bit coufusing fix it later bit .so that we can overlook where it use,what it fix,
+
+
+ abstract 
+ ------------
+ why need abstract ? when create subclass but forget or you not implemenate function which is improtant when inheritance from super class . without abstract contract it let you create class . but with abstract contract it give power and strict rule you need implemente function otherwise it not create and give error like this
+ Traceback (most recent call last):
+  File "/home/support/rpg-engine/play.py", line 6, in <module>
+    test_character = Character("Test", 10, 1)
+TypeError: Can't instantiate abstract class Character without an implementation for abstract method 'special_ability'

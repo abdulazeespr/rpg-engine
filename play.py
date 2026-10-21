@@ -3,6 +3,7 @@ from domain.classes import Warrior, Mage,Cleric,Rogue
 from domain.battle import run_special_round,total_party_damage
 
 if __name__ == "__main__":
+    test_character = Character("Test", 10, 1)
     party = [Warrior("Bram"),Mage("Sylla"),Rogue("kade")]
     dummy = Warrior("Training Dummy")
 
