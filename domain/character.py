@@ -1,10 +1,12 @@
 from abc import ABC, abstractmethod
-
+from domain.inventory import Inventory
 
 class Character(ABC):
-    def __init__(self, name: str, health: int, attack_power: int):
+    def __init__(self, name: str, health: int, attack_power: int, defense: int = 0):
         self.name = name
         self._health = health # protected: "internal use, but not enforced"
+        self.inventory = Inventory()
+        self.defense = defense
         self.__max_health = health # private: name-mangled, harder to touch by accident
         self.attack_power = attack_power
 
@@ -16,10 +18,20 @@ class Character(ABC):
     def is_alive(self) -> bool:
         return self._health > 0 
 
+    @property
+    def defense(self) -> int:
+        return self._defense
+
+    @defense.setter
+    def defense(self, value: int) -> None:
+        if value < 0:
+            raise ValueError("Defense cannot be negative")
+        self._defense = value
+
     def take_damage(self,amount:int) -> None:
         if amount < 0 :
             raise ValueError("Damage Cannot be Negative")
-        self._health = max(0,self._health - amount)   
+        self._health = max(0, self._health - max(0, amount - self.defense))
  
 
     def describe(self) -> str:

@@ -29,7 +29,7 @@ so you only read the variable and can't update
 
  polymoriphism
  ------------
-it bit coufusing fix it later bit .so that we can overlook where it use,what it fix,
+use to in same class have same function with diferent paramas for different behaviours . it can use overide the superclass .
 
 
  abstract 
@@ -39,3 +39,7 @@ it bit coufusing fix it later bit .so that we can overlook where it use,what it 
   File "/home/support/rpg-engine/play.py", line 6, in <module>
     test_character = Character("Test", 10, 1)
 TypeError: Can't instantiate abstract class Character without an implementation for abstract method 'special_ability'
+
+composition
+-----------
+inheritance it follow 'is a ' relationship but composition follow 'has a' relationship . both are used to create class relationship . in compostion means when class use another class or another another method inside .
