@@ -1,3 +1,5 @@
+from domain.exceptions import InventoryEmptyError
+
 class Inventory:
     def __init__(self):
         self._items: list = []
@@ -8,6 +10,10 @@ class Inventory:
 
 
     def use(self, index: int, target) -> str:
+        if not self._items:
+            raise InventoryEmptyError("Inventory is empty, cannot use any items.")
+        if index < 0 or index >= len(self._items):
+            raise IndexError("Index is out of bounds.")
         item = self._items.pop(index)
         return item.apply(target)
 

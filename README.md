@@ -43,3 +43,7 @@ TypeError: Can't instantiate abstract class Character without an implementation 
 composition
 -----------
 inheritance it follow 'is a ' relationship but composition follow 'has a' relationship . both are used to create class relationship . in compostion means when class use another class or another another method inside .
+
+Custom Error 
+-------------
+rather get some not vaild interger ,number something error can more readable and more use debug
