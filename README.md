@@ -47,3 +47,7 @@ inheritance it follow 'is a ' relationship but composition follow 'has a' relati
 Custom Error 
 -------------
 rather get some not vaild interger ,number something error can more readable and more use debug
+
+SOLID
+current we use S — Single Responsibility Principle
+a class should have one reason to change. which item split into usable,equippable
