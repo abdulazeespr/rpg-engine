@@ -51,3 +51,9 @@ rather get some not vaild interger ,number something error can more readable and
 SOLID
 current we use S — Single Responsibility Principle
 a class should have one reason to change. which item split into usable,equippable
+
+Factory & Builder
+----------------
+factory means function or class can deciding which class create to reduce under classes .which one class for create all character rather indiviual class for each Character
+
+builder is class which if class have many object are optional the rather create class with constructor with parameter .build class incremently 
