@@ -56,4 +56,8 @@ Factory & Builder
 ----------------
 factory means function or class can deciding which class create to reduce under classes .which one class for create all character rather indiviual class for each Character
 
-builder is class which if class have many object are optional the rather create class with constructor with parameter .build class incremently 
+builder is class which if class have many object are optional the rather create class with constructor with parameter .build class incremently
+
+Why not make every class a singleton?
+-------------------------------------
+A singleton allows only one shared instance, but a game needs many independent objects of classes like `Character`, each with its own name, health, and abilities. If `Character` were a singleton, creating another character could return the same object and overwrite or share the first character's state. This would make it difficult to represent a party of characters and would tightly couple parts of the game that should be independent.
